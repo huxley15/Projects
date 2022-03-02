@@ -1,2 +1,3 @@
 Small project to play with functionality in winforms by making a small block break game.
 Allows users to save and update scores to local database.
+Left a lot of comments and unused code snippets from trial/error in to help show how the game shifted over time as I played with different functionality.

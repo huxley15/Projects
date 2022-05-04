@@ -1,0 +1,66 @@
+﻿@model WoodPlanning.Models.Client
+@{
+    ViewData["Title"] = "indClient";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Account Details</h1>
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Data</th>
+      <th scope="col">Details</th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <tr>
+      <th scope="row">Name</th>
+      <td>@Model.FirstName @Model.LastName</td>
+    </tr>
+    <tr>
+      <th scope="row">Email</th>
+      <td>@Model.Email</td>
+    </tr>
+    <tr>
+      <th scope="row">Number</th>
+      <td>@Model.PhoneNumber</td>
+    </tr>
+    <tr>
+      <th scope="row">Street Adress</th>
+      <td>@Model.StreetAddress</td>
+    </tr>
+    <tr>
+      <th scope="row">City/State/Postal Code</th>
+      <td>@Model.City, @Model.State @Model.PostalCode</td>
+    </tr>
+    <tr>
+      <th scope="row">Employment Status</th>
+      <td>@Model.EmploymentStatus</td>
+    </tr>
+    <tr>
+      <th scope="row">Marital Status</th>
+      <td>@Model.MaritalStatus</td>
+    </tr>
+    <tr>
+      <th scope="row">Dependents</th>
+      <td>@Model.Dependents</td>
+    </tr>
+    <tr>
+      <th scope="row">Services Desired</th>
+      <td>@Model.Services</td>
+    </tr>
+    <tr>
+      <th scope="row">Comments</th>
+      <td>@Model.Comments</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="container-fluid">
+    <a class="btn btn-success" asp-action="Update"asp-route-id="@Model.Id" role="button">Edit Details</a>
+</div>

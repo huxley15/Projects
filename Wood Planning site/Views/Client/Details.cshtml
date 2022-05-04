@@ -1,0 +1,99 @@
+﻿@model WoodPlanning.Models.Client
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Account Details</h1>
+
+
+    <section>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Data</th>
+                    <th scope="col">Details</th>
+      
+                </tr>
+            </thead>
+
+        <tbody>
+
+            <tr>
+              <th scope="row">Name</th>
+              <td>@Html.DisplayFor(model=>model.FirstName) @Html.DisplayFor(model=>model.LastName)</td>
+            </tr>
+            <tr>
+              <th scope="row">Email</th>
+              <td>@Html.DisplayFor(model=>model.Email)</td>
+            </tr>
+            <tr>
+              <th scope="row">Number</th>
+              <td>@Html.DisplayFor(model=>model.PhoneNumber)</td>
+            </tr>
+            <tr>
+              <th scope="row">Street Adress</th>
+              <td>@Html.DisplayFor(model=>model.StreetAddress)</td>
+            </tr>
+            <tr>
+              <th scope="row">City/State/Postal Code</th>
+              <td>@Html.DisplayFor(model=>model.City), @Html.DisplayFor(model=>model.State) @Html.DisplayFor(model=>model.PostalCode)</td>
+            </tr>
+            <tr>
+              <th scope="row">Employment Status</th>
+              <td>@Html.DisplayFor(model=>model.EmploymentStatus)</td>
+            </tr>
+            <tr>
+              <th scope="row">Marital Status</th>
+              <td>@Html.DisplayFor(model=>model.MaritalStatus)</td>
+            </tr>
+            <tr>
+              <th scope="row">Dependents</th>
+              <td>@Html.DisplayFor(model=>model.Dependents)</td>
+            </tr>
+            <tr>
+              <th scope="row">Services Desired</th>
+              <td>@Html.DisplayFor(model=>model.Services)</td>
+            </tr>
+            <tr>
+              <th scope="row">Comments</th>
+              <td>@Html.DisplayFor(model=>model.Comments)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="container-fluid">
+            <a class="btn btn-success" asp-action="Update"asp-route-id="@Model.Id" role="button">Edit Details</a>
+        </div>
+    </section>
+
+    @*<section id="" class="p-5 bg-warning text-dark">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                
+                <div class="col-md p-5">
+                    <h2>@Html.DisplayFor(model=>model.FirstName)</h2>
+                    <h2>@Html.DisplayFor(model=>model.LastName)</h2>
+                    <p class="lead">
+                        Username @Html.DisplayFor(model=>model.Id)
+                    </p>
+
+                    <p>@Html.DisplayFor(model=>model.Email)</p>
+                    <p>@Html.DisplayFor(model=>model.PhoneNumber)</p>
+                    <p>@Html.DisplayFor(model=>model.StreetAddress)</p>
+                    <p>@Html.DisplayFor(model=>model.City)</p>
+                    <p>@Html.DisplayFor(model=>model.State)</p>
+                    <p>@Html.DisplayFor(model=>model.PostalCode)</p>
+                    <p>@Html.DisplayFor(model=>model.EmploymentStatus)</p>
+                    <p>@Html.DisplayFor(model=>model.MaritalStatus)</p>
+                    <p>@Html.DisplayFor(model=>model.Dependents)</p>
+                    <p>@Html.DisplayFor(model=>model.Services)</p>
+                    <p>@Html.DisplayFor(model=>model.Comments)</p>
+
+                    <a href="#" class="btn btn-success mt-3"><i class="bi bi-bag-check"></i> Add To Cart</a>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>*@
